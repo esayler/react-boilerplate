@@ -1,4 +1,11 @@
-{
+{ "env": {
+    "testing": {
+      "presets": [
+        "latest",
+        "react"
+      ]
+    }
+  },
   "presets": [
     "react",
     "stage-2",

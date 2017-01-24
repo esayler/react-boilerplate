@@ -9,7 +9,7 @@ module.exports = {
     'webpack/hot/only-dev-server',
     './src/index.jsx'
   ],
-  devtool: 'eval-source-map',
+  devtool: 'inline-source-map',
   devServer: {
     hot: true,
     contentBase: resolve(__dirname, 'public'),
@@ -28,10 +28,18 @@ module.exports = {
     reasons: true,
     chunks: false
   },
+  externals: {
+    'cheerio': 'window',
+    'react/addons': 'react',
+    'jsdom': 'window',
+    'react/lib/ExecutionEnvironment': 'react',
+    'react/lib/ReactContext': 'react'
+  },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
+        exclude: /node_modules/,
         loader: 'babel-loader'
       },
       {
@@ -46,9 +54,8 @@ module.exports = {
         use: [
           'style-loader',
           'css-loader?sourceMap',
-          // 'sass-loader'
           {
-            loader: 'sass-loader',
+            loader: 'sass-loader?sourceMap',
             options: {
               includePaths: resolve(__dirname, 'node_modules/normalize-scss/sass')
             }

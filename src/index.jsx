@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import Root from './components/Root'
 
-// require('./styles/main.scss')
+require('./styles/main.scss')
 
 const rootElement = document.getElementById('root')
 ReactDOM.render(
