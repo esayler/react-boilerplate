@@ -29,7 +29,7 @@ module.exports = {
     chunks: false
   },
   externals: {
-    'cheerio': 'window',
+    // 'cheerio': 'window',
     'react/addons': 'react',
     'jsdom': 'window',
     'react/lib/ExecutionEnvironment': 'react',

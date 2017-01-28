@@ -1,1 +1,13 @@
-@import 'normalize'
+@import 'normalize';
+
+body {
+  font-family: Helvetica, sans-serif;
+  font-weight: lighter;
+  text-align: center;
+}
+
+
+.hello {
+  font-weight: lighter;
+  text-decoration: none;
+}

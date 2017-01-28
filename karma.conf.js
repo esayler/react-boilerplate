@@ -15,11 +15,7 @@ module.exports = function (config) {
       devtool: 'eval-source-map', // just do inline source maps instead of the default
       module: webpackConfig.module,
       plugins: webpackConfig.plugins,
-      externals: {
-        'react/addons': 'react',
-        'react/lib/ExecutionEnvironment': 'react',
-        'react/lib/ReactContext': 'react'
-      },
+      externals: webpackConfig.externals,
       resolve: webpackConfig.resolve,
       performance: false
     },
@@ -40,7 +36,7 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome', 'ChromeCanary'],
+    browsers: ['Chrome'],
     singleRun: false,
     concurrency: Infinity
   })
