@@ -4,6 +4,8 @@ $link-color: #000;
 $link-hover-color: #009688;
 $link-active-click-color: #e91e63;
 $active-color: #4caf50;
+$error-msg-bg-color: #ffcdd2;
+$error-msg-text-color: #c62828;
 
 
 body {
@@ -17,8 +19,9 @@ body {
 }
 
 a {
-  color: $link-color;
   margin: 10px;
+
+  color: $link-color;
 
   &:hover {
     color: $link-hover-color;
@@ -44,4 +47,20 @@ a {
       color: $link-active-click-color;
     }
   }
+}
+
+.not-found {
+  //box
+  width: 30%;
+  height: auto;
+  margin: 20px auto;
+  padding: 20px;
+  //border
+  border-radius: 10px;
+  //background
+  background: $error-msg-bg-color;
+  //text
+  color: $error-msg-text-color;
+  text-align: center;
+  //other
 }
