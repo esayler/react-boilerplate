@@ -1,6 +1,5 @@
 @import 'normalize';
 
-//varibles
 $link-color: #000;
 $link-hover-color: #009688;
 $link-active-click-color: #e91e63;
@@ -17,7 +16,6 @@ body {
   color: $active-color;
 }
 
-
 a {
   color: $link-color;
   margin: 10px;
@@ -29,10 +27,7 @@ a {
       color: $link-active-click-color;
     }
   }
-
-
 }
-
 
 .hello-link {
   color: $link-color;
@@ -49,5 +44,4 @@ a {
       color: $link-active-click-color;
     }
   }
-
 }
