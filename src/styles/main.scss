@@ -1,13 +1,53 @@
 @import 'normalize';
 
+//varibles
+$link-color: #000;
+$link-hover-color: #009688;
+$link-active-click-color: #e91e63;
+$active-color: #4caf50;
+
+
 body {
   font-family: Helvetica, sans-serif;
   font-weight: lighter;
   text-align: center;
 }
 
+.active {
+  color: $active-color;
+}
 
-.hello {
-  font-weight: lighter;
-  text-decoration: none;
+
+a {
+  color: $link-color;
+  margin: 10px;
+
+  &:hover {
+    color: $link-hover-color;
+
+    &:active {
+      color: $link-active-click-color;
+    }
+  }
+
+
+}
+
+
+.hello-link {
+  color: $link-color;
+  text-decoration: underline;
+
+  h1 {
+    font-weight: lighter;
+  }
+
+  &:hover {
+    color: $link-hover-color;
+
+    &:active {
+      color: $link-active-click-color;
+    }
+  }
+
 }

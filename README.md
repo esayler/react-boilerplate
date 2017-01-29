@@ -1,8 +1,10 @@
-# React Boilerplate v1.1.0
+# React Boilerplate v1.2.0
 
 ## Features
 
-Utilizes Webpack 2 with HMR, React Router 3, Redux, with Sass Styling
+**Note: This Boilerplate uses pre-release alpha and beta software**
+
+Utilizes Webpack 2 with React Hot Loader 3 (beta), React Router 4 (alpha), Redux, with Sass Styling
 
 Testing using Karma with Mocha/Chai/Enzyme/Sinon
 
@@ -19,7 +21,7 @@ if you have `node` installed, clone this repo and `cd` into it, then either:
 
   - install `yarn` if you don't already have it: [yarn installation instructions here](https://yarnpkg.com/en/docs/getting-started)
   - run `yarn`:
-  
+
   ```shell
   yarn
   ```
@@ -56,6 +58,7 @@ npm test
 
 ### Tooling
   - [Webpack 2](https://github.com/webpack/webpack): "a bundler for javascript and friends"
+  - [React Hot Loader 3](https://github.com/gaearon/react-hot-loader/tree/next): "tweak React components in real time"
   - [Yarn](https://github.com/yarnpkg/yarn): "fast, reliable, and secure dependency management" **(recommended)**
   - [NVM](https://github.com/creationix/nvm): "simple bash script to manage multiple active node.js versions" **(recommended)**
 
@@ -73,4 +76,3 @@ npm test
 ### Linting
   - [ESLint](https://github.com/eslint/eslint)
     - [Standard.js](https://github.com/feross/standard) (`standard`)
-

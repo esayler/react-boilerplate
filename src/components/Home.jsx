@@ -3,7 +3,9 @@ import React from 'react'
 export default class Home extends React.Component {
   render () {
     return (
-      <p>Hello, World!</p>
+      <div>
+        <p className='hello'>Hello, World!</p>
+      </div>
     )
   }
 }
