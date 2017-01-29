@@ -15,35 +15,29 @@ Testing using Karma with Mocha/Chai/Enzyme/Sinon
 ## Installation (MacOS):
 it is highly recommended to use [Node Version Manager (nvm)](https://github.com/creationix/nvm) if you are not already
 
-if you have `node` installed, clone this repo and `cd` into it, then either:
+if you have `node` installed, clone this repo and `cd` into it, then:
 
-1. Install with `yarn` **(Recommended)**
+### Install with `yarn` **(Recommended)**
+```
+yarn
+```
 
-  - install `yarn` if you don't already have it: [yarn installation instructions here](https://yarnpkg.com/en/docs/getting-started)
-  - run `yarn`:
-
-  ```shell
-  yarn
-  ```
-
-2. or, install with `npm`
-    ```
-    npm i
-    ```
+- install `yarn` if you don't already have it: [yarn installation instructions](https://yarnpkg.com/en/docs/getting-started)
 
 ## Usage:
 
 ### to start the development server
-  ```
-  npm start
-  ```
+```
+yarn start
+```
+
 - then navigate to [http://localhost:8080/](http://localhost:8080/)
 
 - saved changes should rebuild and be hot swapped - no need to refresh browser
 
 ### to start the test runner
 ```
-npm test
+yarn test
 ```
 
 - karma will start listening to file changes and run tests automatically on file changes
@@ -59,8 +53,8 @@ npm test
 ### Tooling
   - [Webpack 2](https://github.com/webpack/webpack): "a bundler for javascript and friends"
   - [React Hot Loader 3](https://github.com/gaearon/react-hot-loader/tree/next): "tweak React components in real time"
-  - [Yarn](https://github.com/yarnpkg/yarn): "fast, reliable, and secure dependency management" **(recommended)**
-  - [NVM](https://github.com/creationix/nvm): "simple bash script to manage multiple active node.js versions" **(recommended)**
+  - [Yarn](https://github.com/yarnpkg/yarn): "fast, reliable, and secure dependency management"
+  - [NVM](https://github.com/creationix/nvm): "simple bash script to manage multiple active node.js versions"
 
 ### Styling
   - [Sass](https://github.com/sass/sass): "Sass makes CSS fun again"
