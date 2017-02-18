@@ -1,7 +1,7 @@
 {
   "name": "react-boilerplate",
   "version": "1.1.0",
-  "description": "a boilerplate React.js App using Webpack 2, React Router 3, Redux, Standard.js linter, and testing with Karma and Mocha/Chai",
+  "description": "a boilerplate React.js App using Webpack 2, React Router 4, Standard.js linter, and testing with Karma and Mocha/Chai",
   "main": "./src/index.jsx",
   "scripts": {
     "start": "webpack-dev-server --progress --history-api-fallback",
@@ -69,7 +69,6 @@
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.2",
     "react-router": "4.0.0-alpha.6",
-    "redux": "^3.6.0"
   },
   "keywords": [
     "react",
@@ -77,12 +76,11 @@
     "mocha",
     "chai",
     "sass",
-    "redux",
     "standard",
     "eslint",
     "webpack-2",
     "boilerplate",
-    "react-router-3",
+    "react-router-4",
     "hot-module-replacement"
   ]
 }
