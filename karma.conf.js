@@ -5,32 +5,32 @@ module.exports = function (config) {
     basePath: '',
     frameworks: ['mocha', 'chai', 'sinon'],
     files: [
-      'test/**/*.spec.jsx'
+      'test/**/*.spec.jsx',
     ],
     exclude: [],
     preprocessors: {
-      'test/**/*.jsx': ['webpack', 'sourcemap']
+      'test/**/*.jsx': ['webpack', 'sourcemap'],
     },
     webpack: { // kind of a copy of your webpack config
-      devtool: 'eval-source-map', // just do inline source maps instead of the default
+      devtool: 'source-map', // just do inline source maps instead of the default
       module: webpackConfig.module,
       plugins: webpackConfig.plugins,
       externals: webpackConfig.externals,
       resolve: webpackConfig.resolve,
-      performance: false
+      performance: false,
     },
     webpackServer: {
-      stats: 'errors-only'
+      stats: 'errors-only',
     },
     reporters: ['mocha'],
     mochaReporter: {
       colors: {
         warning: 'black',
-        error: 'red'
+        error: 'red',
       },
       mochaReporter: {
-        showDiff: 'unified'
-      }
+        showDiff: 'unified',
+      },
     },
     port: 9876,
     colors: true,
@@ -38,6 +38,6 @@ module.exports = function (config) {
     autoWatch: true,
     browsers: ['Chrome'],
     singleRun: false,
-    concurrency: Infinity
+    concurrency: Infinity,
   })
 }

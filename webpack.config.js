@@ -7,47 +7,47 @@ module.exports = {
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
-    './src/index.jsx'
+    './src/index.jsx',
   ],
   devtool: 'inline-source-map',
   devServer: {
     hot: true,
     contentBase: resolve(__dirname, 'public'),
-    publicPath: '/'
+    publicPath: '/',
   },
   output: {
     path: resolve(__dirname, 'public'),
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: '/',
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json', '.scss', '.css']
+    extensions: ['.js', '.jsx', '.json', '.scss', '.css'],
   },
   stats: {
     colors: true,
     reasons: true,
-    chunks: false
+    chunks: false,
   },
   externals: {
     // 'cheerio': 'window',
     'react/addons': 'react',
     'jsdom': 'window',
     'react/lib/ExecutionEnvironment': 'react',
-    'react/lib/ReactContext': 'react'
+    'react/lib/ReactContext': 'react',
   },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loaders: ['babel-loader']
+        loaders: ['babel-loader'],
       },
       {
         test: /\.css$/,
         use: [
           'style-loader',
-          'css-loader'
-        ]
+          'css-loader',
+        ],
       },
       {
         test: /\.scss$/,
@@ -57,15 +57,15 @@ module.exports = {
           {
             loader: 'sass-loader?sourceMap',
             options: {
-              includePaths: resolve(__dirname, 'node_modules/normalize-scss/sass')
-            }
-          }
-        ]
-      }
-    ]
+              includePaths: resolve(__dirname, 'node_modules/normalize-scss/sass'),
+            },
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin()
-  ]
+    new webpack.NamedModulesPlugin(),
+  ],
 }

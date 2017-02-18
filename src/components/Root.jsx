@@ -15,7 +15,7 @@ const Root = () => (
       <nav>
         <Link to='/' activeOnlyWhenExact activeClassName='active'>Home</Link>
         <Link to='/about' activeClassName='active'>About</Link>
-        <Link to='/blah' activeClassName='active'>404</Link>
+        <Link to='/missing' activeClassName='active'>404</Link>
       </nav>
 
       <div>

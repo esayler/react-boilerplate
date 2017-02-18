@@ -1,17 +1,22 @@
 @import 'normalize';
 
-$link-color: #000;
+$link-color: #0F0F0F;
 $link-hover-color: #009688;
 $link-active-click-color: #e91e63;
 $active-color: #4caf50;
-$error-msg-bg-color: #ffcdd2;
-$error-msg-text-color: #c62828;
+$error-msg-bg-color: #e91e63;
+$error-msg-text-color: #FAFAFA;
+$content-bg-color: #FAFAFA;
 
+html {
+  background: #FFF;
+}
 
 body {
   font-family: Helvetica, sans-serif;
   font-weight: lighter;
   text-align: center;
+  color: #000;
 }
 
 .active {
@@ -50,17 +55,22 @@ a {
 }
 
 .not-found {
-  //box
-  width: 30%;
-  height: auto;
+  width: 40%;
+  height: 50px;
   margin: 20px auto;
   padding: 20px;
-  //border
   border-radius: 10px;
-  //background
   background: $error-msg-bg-color;
-  //text
   color: $error-msg-text-color;
   text-align: center;
-  //other
+  filter: opacity(75%);
+}
+
+.content {
+  height: auto;
+  width: 40%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: $content-bg-color;
 }
