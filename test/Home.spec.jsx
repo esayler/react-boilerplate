@@ -20,7 +20,7 @@ describe('<Home />', () => {
     })
 
     it('should show text "Hello, World!"', () => {
-      expect(wrapper.find('.hello')).to.contain.text('Hello, World!')
+      expect(wrapper.find('.content')).to.contain.text('Hello, World!')
     })
   })
 })

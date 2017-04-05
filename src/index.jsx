@@ -12,7 +12,7 @@ ReactDOM.render(
   </HotReloader>, rootElement)
 
 if (module.hot) {
-  module.hot.accept('../src', () => {
+  module.hot.accept('./components/Root', () => {
     ReactDOM.render(
       <HotReloader>
         <Root />
