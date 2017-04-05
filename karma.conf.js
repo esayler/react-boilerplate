@@ -5,7 +5,7 @@ module.exports = function (config) {
     basePath: '',
     frameworks: ['mocha', 'chai', 'sinon'],
     files: [
-      'test/**/*.spec.jsx',
+      { pattern: 'test/**/*.spec.jsx', watched: false, serverd: true, included: true },
     ],
     exclude: [],
     preprocessors: {
@@ -32,10 +32,14 @@ module.exports = function (config) {
         showDiff: 'unified',
       },
     },
+    client: {
+      captureConsole: false,
+    },
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
+    autoWatchBatchDelay: 1000,
     browsers: ['Chrome'],
     singleRun: false,
     concurrency: Infinity,
