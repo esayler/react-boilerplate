@@ -12,7 +12,7 @@ module.exports = function (config) {
       'test/**/*.jsx': ['webpack', 'sourcemap'],
     },
     webpack: { // kind of a copy of your webpack config
-      devtool: 'source-map', // just do inline source maps instead of the default
+      devtool: 'inline-source-map', // just do inline source maps instead of the default
       module: webpackConfig.module,
       plugins: webpackConfig.plugins,
       externals: webpackConfig.externals,

@@ -1,21 +1,27 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
 import { AppContainer as HotReloader } from 'react-hot-loader'
 import Root from './components/Root'
+import './styles/base.scss'
+import configureStore from './store'
+import ConsoleErrorReporter from './errorReporter'
+const { store, history } = configureStore({})
 
-require('./styles/base.scss')
-
-const rootElement = document.getElementById('root')
-ReactDOM.render(
-  <HotReloader>
-    <Root />
-  </HotReloader>, rootElement)
+render(
+  <HotReloader errorReporter={ConsoleErrorReporter}>
+    <Root store={store} history={history} />
+  </HotReloader>,
+  document.getElementById('root')
+)
 
 if (module.hot) {
-  module.hot.accept('./components/Root', () => {
-    ReactDOM.render(
-      <HotReloader>
-        <Root />
-      </HotReloader>, rootElement)
+  module.hot.accept('./components/Root/index.jsx', () => {
+    const NextRoot = require('./components/Root/index.jsx').default
+    render(
+      <HotReloader errorReporter={ConsoleErrorReporter}>
+        <NextRoot store={store} history={history} />
+      </HotReloader>,
+      document.getElementById('root')
+    )
   })
 }

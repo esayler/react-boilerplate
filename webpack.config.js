@@ -5,7 +5,7 @@ module.exports = {
   context: __dirname,
   entry: [
     'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:8080',
+    'webpack-dev-server/client?http://localhost:8082',
     'webpack/hot/only-dev-server',
     './src/index.jsx',
   ],
