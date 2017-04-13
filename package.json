@@ -5,6 +5,7 @@
   "main": "./src/index.jsx",
   "scripts": {
     "start": "webpack-dev-server --progress --history-api-fallback",
+    "serve": "npm build && nodemon server/index.js --ignore /src",
     "build": "webpack --progress",
     "watch": "webpack --progress --watch",
     "lint": "standard",
@@ -15,12 +16,12 @@
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.22.2",
-    "babel-core": "^6.22.1",
-    "babel-loader": "^6.2.10",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
     "babel-plugin-lodash": "^3.2.11",
     "babel-preset-latest": "^6.22.0",
-    "babel-preset-react": "^6.22.0",
-    "babel-preset-stage-2": "^6.22.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "chai": "^3.5.0",
     "chai-enzyme": "^0.6.1",
     "chai-jsx": "^1.0.1",
@@ -61,10 +62,19 @@
     "webpack-dev-server": "^2.1.0-beta.0"
   },
   "dependencies": {
+    "babel-eslint": "^7.2.2",
+    "babel-preset-env": "^1.3.3",
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.3",
+    "express": "^4.15.2",
     "global": "^4.3.1",
+    "history": "^4.6.1",
     "karma-cli": "^1.0.1",
+    "knex": "^0.12.9",
     "lodash": "^4.17.4",
+    "nodemon": "^1.11.0",
     "normalize-scss": "^6.0.0",
+    "pg": "^6.1.5",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.3",
@@ -73,7 +83,9 @@
     "react-router-redux": "next",
     "redux": "^3.6.0",
     "redux-logger": "^3.0.1",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "webpack-dev-middleware": "^1.10.1",
+    "webpack-hot-middleware": "^2.18.0"
   },
   "keywords": [
     "react",

@@ -5,7 +5,7 @@ module.exports = {
   context: __dirname,
   entry: [
     'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:8082',
+    'webpack-hot-middleware/client?path=http://localhost:3000/__webpack_hmr',
     'webpack/hot/only-dev-server',
     './src/index.jsx',
   ],
@@ -67,5 +67,6 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
   ],
 }

@@ -1,15 +1,16 @@
 { "env": {
     "testing": {
       "presets": [
-        "latest",
-        "react"
+        "env",
+        "react",
+        "stage-2"
       ]
     }
   },
   "presets": [
     "react",
     "stage-2",
-    ["latest", { "modules": false }]
+    ["env", { "modules": false }]
   ],
   "plugins": [
     "react-hot-loader/babel"
